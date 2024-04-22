@@ -1,0 +1,102 @@
+@import "../../variables";
+
+section.step-three {
+  position: relative;
+  h2 {
+    color: $Marine-blue;
+    margin-top: 30px;
+    font-size: 2.2em;
+    margin-bottom: 12px;
+  }
+  p {
+    color: $Cool-gray;
+    margin-bottom: 30px;
+  }
+  form {
+    label {
+      padding: 20px;
+      border: 1px solid $Light-gray;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 6px;
+      margin-bottom: 15px;
+      transition: 0.3s all;
+      @media (min-width: 768px) {
+        min-width: 380px;
+      }
+      &:has(input[type="checkbox"]:checked) {
+        background-color: $Alabaster;
+        border: 1px solid $Marine-blue;
+      }
+      .text {
+        display: flex;
+        flex-direction: column;
+        margin-left: -15px;
+        grid-column: 2/6;
+        .title {
+          font-weight: bold;
+          color: $Marine-blue;
+          margin-bottom: 5px;
+        }
+        .desc {
+          font-size: 13px;
+          color: $Cool-gray;
+        }
+      }
+      .price {
+        font-size: 14px;
+        color: $Purplish-blue;
+      }
+      input {
+        width: 17px;
+        height: 17px;
+      }
+    }
+    .btns {
+      @media (max-width: 767px) {
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        padding: 20px;
+        left: 0;
+        background-color: $White;
+      }
+      button {
+        border: none;
+        padding: 13px 25px;
+        color: $White;
+        background-color: $Marine-blue;
+        border-radius: 6px;
+        font-size: 14px;
+        user-select: none;
+        transition: 0.3s;
+        cursor: pointer;
+        &:hover {
+          background-color: transparentize($color: $Marine-blue, $amount: 0.2);
+        }
+        @media (min-width: 768px) {
+          border-radius: 10px;
+          position: absolute;
+          bottom: 15px;
+          right: 0;
+        }
+      }
+      span:last-of-type {
+        padding: 13px 0;
+        color: $Cool-gray;
+        font-size: 14px;
+        cursor: pointer;
+        user-select: none;
+        @media (min-width: 768px) {
+          position: absolute;
+          bottom: 15px;
+          left: 0;
+        }
+      }
+    }
+  }
+}

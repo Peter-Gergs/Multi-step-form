@@ -1,0 +1,56 @@
+@import "../../variables";
+section.step-one {
+  position: relative;
+  h2 {
+    color: $Marine-blue;
+    margin-top: 30px;
+    font-size: 2.2em;
+    margin-bottom: 12px;
+  }
+  p {
+    color: $Cool-gray;
+    margin-bottom: 30px;
+  }
+  input {
+    display: block;
+    border: 1px solid $Light-gray;
+    padding: 15px;
+    width: 100%;
+    margin-bottom: 20px;
+    outline: none;
+    border-radius: 8px;
+  }
+  label {
+    color: $Marine-blue;
+    display: block;
+    margin-bottom: 8px;
+  }
+  span {
+    color: hsl(354, 84%, 57%);
+    position: absolute;
+    right: 0;
+    transform: translateY(-90px);
+    font-size: 13px;
+    font-weight: 500;
+    display: none;
+    @media (max-width: 767px) {
+      transform: translate(-30px, -90px);
+    }
+  }
+  button {
+    position: absolute;
+    border: none;
+    bottom: 15px;
+    right: 0;
+    padding: 13px 25px;
+    color: $White;
+    background-color: $Marine-blue;
+    border-radius: 10px;
+    font-size: 14px;
+    @media (max-width: 767px) {
+      position: fixed;
+      right: 15px;
+      border-radius: 6px;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@import "../../variables";
+section.step-five {
+  text-align: center;
+  img {
+    margin-top: 80px;
+    @media (min-width: 768px) {
+      margin-top: 140px;
+    }
+  }
+  h2 {
+    color: $Marine-blue;
+    margin-bottom: 22px;
+    font-size: 2em;
+    margin-top: 1em;
+  }
+  p {
+    line-height: 1.4;
+    color: $Cool-gray;
+        @media (min-width: 768px) {
+    max-width: 440px;
+    }
+  }
+}

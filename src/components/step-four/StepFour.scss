@@ -1,0 +1,112 @@
+@import "../../variables";
+
+section.step-four {
+  position: relative;
+  h2 {
+    color: $Marine-blue;
+    margin-top: 30px;
+    font-size: 2.2em;
+    margin-bottom: 12px;
+  }
+  p {
+    color: $Cool-gray;
+    margin-bottom: 30px;
+  }
+  .checkout {
+    background-color: $Magnolia;
+    border-radius: 8px;
+    padding: 20px;
+    .summary-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .title {
+        border-radius: 8px;
+        h3 {
+          text-transform: capitalize;
+          color: $Marine-blue;
+        }
+        .change-btn {
+          text-decoration: underline;
+          color: $Cool-gray;
+          cursor: pointer;
+        }
+      }
+      .price {
+        color: $Marine-blue;
+        font-weight: bold;
+      }
+    }
+    .service {
+      margin: 20px 0;
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+      &:nth-of-type(2) {
+        padding-top: 20px;
+        border-top: 1px solid $Light-gray;
+      }
+      span.name {
+        color: $Cool-gray;
+      }
+      span.price {
+        color: $Marine-blue;
+      }
+    }
+  }
+  .total {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    .text {
+      font-size: 14px;
+      color: $Cool-gray;
+    }
+    .total-price {
+      font-weight: bold;
+      color: $Purplish-blue;
+      font-size: 18px;
+    }
+  }
+  .btns {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    width: 100%;
+    align-items: center;
+    user-select: none;
+    background-color: $White;
+    @media (min-width: 768px) {
+      position: absolute;
+      padding: 0 0 20px;
+      background-color: transparent;
+    }
+    span {
+      color: $Cool-gray;
+      cursor: pointer;
+    }
+    button {
+      border: none;
+      background-color: $Purplish-blue;
+      color: $White;
+      padding: 13px 30px;
+      border-radius: 5px;
+      font-weight: 400;
+      transition: 0.3s;
+      font-size: 16px;
+      @media (min-width: 768px) {
+        border-radius: 8px;
+      }
+      cursor: pointer;
+      &:hover {
+        background-color: transparentize($color: $Purplish-blue, $amount: 0.25);
+      }
+    }
+  }
+}

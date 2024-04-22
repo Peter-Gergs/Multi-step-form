@@ -1,0 +1,54 @@
+@import "./variables.scss";
+@font-face {
+  font-family: "Ubuntu";
+  src: url("./assets/fonts/Ubuntu-Regular.ttf"), format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Ubuntu";
+  src: url("./assets/fonts/Ubuntu-Medium.ttf"), format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Ubuntu";
+  src: url("./assets/fonts/Ubuntu-Bold.ttf"), format("truetype");
+  font-weight: 700;
+}
+
+body {
+  background-color: $Magnolia;
+  font-family: "Ubuntu";
+  height: 100vh;
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.app {
+  display: flex;
+  border-radius: 15px;
+  gap: 50px;
+  @media (max-width: 767px) {
+    flex-direction: column;
+    width: 100%;
+    section {
+      margin: 0 20px;
+      background-color: $White;
+      border-radius: 10px;
+      position: absolute !important;
+      top: 120px;
+      padding: 30px;
+      width: calc(100% - 40px);
+    }
+  }
+  @media (min-width: 768px) {
+    padding: 20px 50px 20px 20px;
+    background-color: $White;
+    box-shadow: 2px 2px 14px 2px $Light-gray;
+  }
+  @media (min-width: 992px) {
+    gap: 120px;
+    padding: 20px 100px 20px 20px;
+  }
+}

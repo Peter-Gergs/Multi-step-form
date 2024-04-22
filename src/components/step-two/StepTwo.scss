@@ -1,0 +1,165 @@
+@import "../../variables";
+section.step-two {
+  position: relative;
+  @media (max-width: 767px) {
+    padding-bottom: 90px;
+  }
+  h2 {
+    color: $Marine-blue;
+    margin-top: 30px;
+    font-size: 2.2em;
+    margin-bottom: 12px;
+  }
+  p {
+    color: $Cool-gray;
+    margin-bottom: 30px;
+  }
+  form {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
+    input[type="radio"] {
+      appearance: none;
+      -webkit-appearance: none;
+    }
+    label:has(+ input[type="radio"]) {
+      flex: 1;
+      border-radius: 6px;
+      padding: 18px 13px;
+      border: 1px solid $Light-gray;
+      transition: 0.3s;
+      width: 130px;
+      @media (max-width: 767px) {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+      }
+      &:has(+ input:checked) {
+        border-color: $Purplish-blue;
+      }
+      h6 {
+        margin-top: 35px;
+        font-size: 16px;
+        color: $Marine-blue;
+        @media (max-width: 767px) {
+          margin-top: 0;
+        }
+      }
+      span {
+        font-size: 14px;
+        &:first-of-type {
+          color: $Cool-gray !important;
+        }
+        &:last-of-type {
+          color: $Marine-blue;
+          display: block;
+          margin-top: 5px;
+        }
+      }
+    }
+    input[type="checkbox"] {
+      appearance: none;
+      -webkit-appearance: none;
+    }
+    label:has(+ input[type="checkbox"]) {
+      position: absolute;
+      transition: 0.3s top;
+      left: 50%;
+      transform: translateX(-50%);
+      .btn-container {
+        width: 60px;
+        height: 25px;
+        background-color: $Marine-blue;
+        border-radius: 20% / 50%;
+        position: relative;
+        .ball {
+          height: 17px;
+          width: 17px;
+          background-color: $White;
+          border-radius: 50%;
+          position: absolute;
+          top: 4px;
+          left: 4.5px;
+          transition: 0.3s;
+        }
+      }
+      > span {
+        position: absolute;
+        top: 5px;
+        font-weight: 700;
+        transition: 0.3s;
+        user-select: none;
+        &:nth-of-type(1) {
+          color: $Marine-blue;
+          left: -95px;
+        }
+        &:nth-of-type(2) {
+          right: -80px;
+          color: $Cool-gray;
+        }
+      }
+      &:has(+ input[type="checkbox"]:checked) {
+        .ball {
+          left: calc(100% - (4.5px + 17px));
+        }
+        > span {
+          &:nth-of-type(2) {
+            color: $Marine-blue;
+          }
+          &:nth-of-type(1) {
+            color: $Cool-gray;
+          }
+        }
+      }
+    }
+
+    .btns {
+      @media (max-width:767px) {
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        padding: 20px;
+        left: 0;
+        background-color: $White;
+      }
+      button {
+        border: none;
+        padding: 13px 25px;
+        color: $White;
+        background-color: $Marine-blue;
+        border-radius: 6px;
+        font-size: 14px;
+        user-select: none;
+        transition: 0.3s;
+        cursor: pointer;
+        &:hover {
+          background-color: transparentize($color: $Marine-blue, $amount: 0.2);
+        }
+        @media (min-width: 768px) {
+          border-radius: 10px;
+          position: absolute;
+          bottom: 15px;
+          right: 0;
+        }
+      }
+      span:last-of-type {
+        padding: 13px 0;
+        color: $Cool-gray;
+        font-size: 14px;
+        cursor: pointer;
+        user-select: none;
+        @media (min-width: 768px) {
+          position: absolute;
+          bottom: 15px;
+          left: 0;
+        }
+      }
+    }
+  }
+}
